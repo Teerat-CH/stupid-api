@@ -1,0 +1,5 @@
+services:        # List of containers you want to run
+  api:           # Name of your service (you choose this name)
+    build: .     # Build image from Dockerfile in current directory
+    ports:
+      - "8000:8000"
