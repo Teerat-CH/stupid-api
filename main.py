@@ -5,7 +5,7 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"message": "Hello from stupid-api! this is the updated version."}
+    return {"message": "Hello from stupid-api! this is the updated version 2."}
 
 @app.post("/echo")
 def echo_string(text: str):

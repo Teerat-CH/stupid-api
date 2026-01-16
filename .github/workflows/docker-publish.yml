@@ -1,4 +1,4 @@
-name: Publish to Docker Hub
+name: Publish to Docker Hub -> Render
 
 on:
   push:
@@ -27,3 +27,6 @@ jobs:
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/stupid-api:latest
             ${{ secrets.DOCKERHUB_USERNAME }}/stupid-api:${{ github.sha }}
+
+      - name: Deploy to Render
+        run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
