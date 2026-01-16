@@ -3,3 +3,5 @@ services:        # List of containers you want to run
     build: .     # Build image from Dockerfile in current directory
     ports:
       - "8000:8000"
+    env_file:
+      - .env    # Load environment variables from .env file
